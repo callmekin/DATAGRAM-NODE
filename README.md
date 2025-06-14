@@ -36,7 +36,7 @@ Make sure you’ve got these installed:
 
 ```bash
 sudo apt update
-sudo apt install git wget curl docker docker-compose -y
+sudo apt install git wget curl -y
 ```
 Download and make the CLI executable:
 
