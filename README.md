@@ -41,12 +41,9 @@ sudo apt install git wget curl -y
 Download and make the CLI executable:
 
 ```bash
-wget https://github.com/datagram-labs/datagram-cli/releases/latest/download/datagram-cli-x86_64-linux -O datagram
-```
-
-```bash
-chmod +x datagram
-mv datagram /usr/local/bin/datagram
+wget https://github.com/Datagram-Group/datagram-cli-release/releases/latest/download/datagram-cli-x86_64-linux && \
+sudo mv datagram-cli-x86_64-linux /usr/local/bin/datagram-cli && \
+sudo chmod +x /usr/local/bin/datagram-cli
 ```
 
 ## Run the Node
