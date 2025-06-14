@@ -41,7 +41,7 @@ sudo apt install git wget curl -y
 Download and make the CLI executable:
 
 ```bash
-wget https://github.com/datagram-labs/datagram-cli/releases/latest/download/datagram-cli-x86_64-unknown-linux-gnu -O datagram
+wget https://github.com/datagram-labs/datagram-cli/releases/latest/download/datagram-cli-x86_64-linux -O datagram
 ```
 
 ```bash
