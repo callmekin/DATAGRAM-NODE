@@ -51,7 +51,7 @@ sudo chmod +x /usr/local/bin/datagram-cli
 First, create a screen session using the following command. This ensures your node keeps running even if you close the terminal:
 
 ```bash
-screen -dmS datagram datagram run --key YOUR_KEY_HERE
+screen -dmS datagram datagram-cli run -- -key API_KEY
 ```
 
 ### Now, open the Datagram Dashboard and:
