@@ -57,7 +57,7 @@ mv datagram-cli-*-linux /usr/local/bin/datagram
 First, create a screen session using the following command. This ensures your node keeps running even if you close the terminal:
 
 ```bash
-screen -dmS datagram
+screen -dmS datagram datagram run --key <your-key>
 ```
 
 ### Now, open the Datagram Dashboard and:
@@ -70,9 +70,6 @@ screen -dmS datagram
 
 Then run the following command (make sure to replace YOUR_API_KEY with the actual key you just copied):
 
-```bash
-datagram-cli run -- -key YOUR_API_KEY
-```
 
 To detach from the screen (without stopping the process): Press `Ctrl + A`, then `D`
 
