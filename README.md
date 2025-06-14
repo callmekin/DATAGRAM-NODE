@@ -41,15 +41,12 @@ sudo apt install git wget curl -y
 Download and make the CLI executable:
 
 ```bash
-wget https://github.com/Datagram-Group/datagram-cli-release/releases/latest/download/datagram-cli-$(uname -m)-linux
+wget https://github.com/datagram-labs/datagram-cli/releases/latest/download/datagram-cli-x86_64-unknown-linux-gnu -O datagram
 ```
 
 ```bash
-chmod +x datagram-cli-*-linux
-```
-
-```bash
-mv datagram-cli-*-linux /usr/local/bin/datagram
+chmod +x datagram
+mv datagram /usr/local/bin/datagram
 ```
 
 ## Run the Node
@@ -57,7 +54,7 @@ mv datagram-cli-*-linux /usr/local/bin/datagram
 First, create a screen session using the following command. This ensures your node keeps running even if you close the terminal:
 
 ```bash
-screen -dmS datagram datagram run --key <your-key>
+screen -dmS datagram datagram run --key YOUR_KEY_HERE
 ```
 
 ### Now, open the Datagram Dashboard and:
