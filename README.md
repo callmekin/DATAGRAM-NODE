@@ -55,8 +55,10 @@ screen -S datagram
 ```
 
 ```bash
-datagram run -- -key ENTER_API_KEY
+datagram-cli run -- -key ENTER_API_KEY
 ```
+
+Replace `ENTER_API_KEY` with the actual key you got from Datagram.
 
 ### Now, open the Datagram Dashboard and:
 
@@ -68,6 +70,16 @@ datagram run -- -key ENTER_API_KEY
 
 Then run the following command (make sure to replace YOUR_API_KEY with the actual key you just copied):
 
+### If everything works, you’ll see output like:
+
+```bash
+App version: 1.1.x
+Downloading...
+Worker version: 1.1.x
+INFO: Downloaded 100.00%
+Run...
+34527
+```
 
 To detach from the screen (without stopping the process): Press `Ctrl + A`, then `D`
 
@@ -88,6 +100,54 @@ Make sure to fill out the **Early Alpha Form** using your **X (Twitter)** and **
 
 Your node will **start earning points after 4~6 hours** of continuous uptime. For **maximum rewards**, keep your node running **24/7** without interruptions.
 
+
+
+## 🛠 Common Errors & Fixes
+
+### ❌ Error: datagram-cli: command not found
+Fix: You probably forgot to move the binary or named it incorrectly. Re-run:
+
+```bash
+chmod +x datagram
+mv datagram /usr/local/bin/datagram-cli
+```
+
+Then check:
+
+```bash
+datagram-cli --help
+```
+
+### ❌ Error: invalid cross-device link during binary download
+
+```bash
+panic: rename /tmp/download-xxxxx.tmp /root/.datagram/...
+invalid cross-device link
+```
+
+Fix: This happens when /tmp and /root are on different disk volumes.
+
+Solution: Run the node manually first once (outside of screen), let it complete the download and setup:
+
+```bash
+datagram-cli run -- -key ENTER_API_KEY
+```
+
+### ❌ Error: Nothing happens after running in screen
+
+Fix: Make sure your full command looks like this:
+
+```BASH
+screen -S datagram
+```
+
+Then inside:
+
+```BASH
+datagram-cli run -- -key ENTER_API_KEY
+```
+
+Do not use screen -dmS unless you're 100% sure it's running in background correctly and logging somewhere.
 
 ## Disclaimer
 
