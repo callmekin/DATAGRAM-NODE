@@ -6,7 +6,6 @@ A **Node.js/Go-based command-line tool** to interact with the Datagram network r
 
 - **License Management**: Input full-core or partner-license in CLI or environment variables.
 - **Run Nodes**: Start a full or partner core node directly from terminal.
-- **Docker Support**: Containerized node deployment with provided `Dockerfile` and helper scripts.
 - **Node Monitoring**: Fetch and display current node state, peer connections, and uptime.
 - **Config via CLI Flags / Env Vars**: Easy customization on-the-fly.
 
