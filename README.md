@@ -149,6 +149,28 @@ datagram-cli run -- -key ENTER_API_KEY
 
 Do not use screen -dmS unless you're 100% sure it's running in background correctly and logging somewhere.
 
+### ❌ Error: `invalid cross-device link` or `panic: rename /tmp/...`
+
+If you're running the node and you see this error: It means your system is trying to move a temp file across different partitions — which isn't allowed by default. To fix this, you need to set a custom temporary directory.
+
+Fix: Step 1: **Create a custom temp directory in the screen**
+
+```bash
+mkdir -p /root/tmp
+```
+
+Step 2: **Run with TMPDIR environment variable in the screen*
+
+```bash
+TMPDIR=/root/tmp datagram-cli run -- -key ENTER_API_KEY_
+```
+
+To detach screen: `Ctrl + A`, then press `D`
+To reattach screen: `screen -r datagram`
+
+
+
+
 ## Disclaimer
 
 All information shared is for educational and community purposes only. Nothing here constitutes financial advice or a solicitation to invest.
